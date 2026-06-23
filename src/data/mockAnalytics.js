@@ -49,12 +49,13 @@ export const channelAttribution = [
 ]
 
 // Paid Ads CAC trend over 6 months (for the mini chart)
-// Apr→Jun increase: (78-55)/55 = 41.8% — supports "over 40% in two months" claim
+// May→Jun increase: (78-55)/55 = 41.8% — supports "over 40% in the past two months" claim
+// May held flat vs Apr so the two-month window (May+Jun) is unambiguous
 export const paidAdsCacTrend = [
   { month: 'Jan', cac: 48 },
   { month: 'Feb', cac: 51 },
   { month: 'Mar', cac: 54 },
   { month: 'Apr', cac: 55 },
-  { month: 'May', cac: 57 },
+  { month: 'May', cac: 55 },
   { month: 'Jun', cac: 78 },
 ]
