@@ -125,7 +125,7 @@ export default function ChannelAttribution() {
 
       <InsightCallout
         type="warning"
-        insight="Organic and referral now outperform paid acquisition — Paid Ads CAC has increased 40% over the past two months."
+        insight="Organic and referral now outperform paid acquisition — Paid Ads CAC has risen over 40% in the past two months."
         detail="At $78 CAC vs. near-zero for organic, rebalancing spend toward content and referral programs could meaningfully improve blended CAC."
       />
     </div>

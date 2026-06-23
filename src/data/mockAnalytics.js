@@ -1,18 +1,16 @@
 // Activation Funnel — 5 stages
+// Drop-off verification (component uses Math.round((prev-curr)/prev*100)):
+//   Signups→Email Verified:  (180/1000)  = 18%
+//   Email Verified→Onboarded:(220/820)   = 27%
+//   Onboarded→Activated:     (220/600)   = 37%  ← biggest pre-paid leak
+//   Activated→Paid:          (285/380)   = 75%
+// "62% never reach activation": (1000-380)/1000 = 62% ✓
 export const activationFunnel = [
   { stage: 'Signups', value: 1000, fill: '#6366f1' },
   { stage: 'Email Verified', value: 820, fill: '#818cf8' },
-  { stage: 'Onboarded', value: 510, fill: '#a5b4fc' },
+  { stage: 'Onboarded', value: 600, fill: '#a5b4fc' },
   { stage: 'Activated', value: 380, fill: '#10b981' },
   { stage: 'Paid', value: 95, fill: '#34d399' },
-]
-
-// Drop-off rates between each stage
-export const funnelDropOffs = [
-  { from: 'Signups', to: 'Email Verified', dropPct: 18 },
-  { from: 'Email Verified', to: 'Onboarded', dropPct: 38 },
-  { from: 'Onboarded', to: 'Activated', dropPct: 25.5 },
-  { from: 'Activated', to: 'Paid', dropPct: 75 },
 ]
 
 // Retention Curve — weekly cohort, 9 data points (week 0–8)
@@ -51,11 +49,12 @@ export const channelAttribution = [
 ]
 
 // Paid Ads CAC trend over 6 months (for the mini chart)
+// Apr→Jun increase: (78-55)/55 = 41.8% — supports "over 40% in two months" claim
 export const paidAdsCacTrend = [
   { month: 'Jan', cac: 48 },
-  { month: 'Feb', cac: 52 },
-  { month: 'Mar', cac: 57 },
-  { month: 'Apr', cac: 63 },
-  { month: 'May', cac: 71 },
+  { month: 'Feb', cac: 51 },
+  { month: 'Mar', cac: 54 },
+  { month: 'Apr', cac: 55 },
+  { month: 'May', cac: 57 },
   { month: 'Jun', cac: 78 },
 ]
